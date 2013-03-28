@@ -41,6 +41,7 @@ namespace Castle.Facilities.WcfIntegration
 
 		protected void ConfigureServiceHost(ServiceHost serviceHost, IWcfServiceModel serviceModel, ComponentModel model)
 		{
+            //This needs to be a bit more configurable.
 			serviceHost.Description.Behaviors.Add(
 				new WindsorDependencyInjectionServiceBehavior(kernel, model)
 				);
